@@ -10,10 +10,10 @@ function getDefaultObject() {
 let data = getDefaultObject()
 //saving and loading
 function save(){
-    window.localStorage.setItem('shrubCirclesSave', JSON.stringify(data))
+    window.localStorage.setItem('shrubNumberSave', JSON.stringify(data))
 }
 function load() {
-    let savedata = JSON.parse(window.localStorage.getItem('shrubCirclesSave'))
+    let savedata = JSON.parse(window.localStorage.getItem('shrubNumberSave'))
     if (savedata !== undefined) fixSave(data, savedata)
     fixOldSaves()
 }
@@ -64,11 +64,11 @@ window.onload = function (){
 //full reset
 function fullReset(){
     exportSave()
-    window.localStorage.removeItem('shrubCirclesSave')
+    window.localStorage.removeItem('shrubNumberSave')
     location.reload()
 }
 function deleteSave(){
-    window.localStorage.removeItem('shrubCirclesSave')
+    window.localStorage.removeItem('shrubNumberSave')
     location.reload()
 }
 
