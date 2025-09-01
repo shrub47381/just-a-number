@@ -1,1 +1,1 @@
-// main code
+alert('test')
