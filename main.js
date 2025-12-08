@@ -1,5 +1,9 @@
 function gainNumber(lowestGain){
     data.numbers[0] = data.numbers[0].plus(lowestGain)
-while (true) {
-    gainNumber(lowestGain)
-}
+function mainLoop(){
+    diff = (Date.now()-data.time)/1000
+    data.time = Date.now()
+    gainNumber(gain.times(diff))
+window.setInterval(function(){
+    mainLoop()
+}, 50);
